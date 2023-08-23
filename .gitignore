@@ -1,0 +1,48 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Ignore some directory
+Client/local/
+# Ignore some directory
+Client/publickeys/
+
+# Ignore some directory
+Server/storage/
+# Ignore some directory
+Server/login/
+# Ignore some directory
+Server/publickeys/
+
+# Compiled binaries
+/server
+/client
