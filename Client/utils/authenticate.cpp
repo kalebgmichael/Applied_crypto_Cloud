@@ -436,7 +436,8 @@ int cloudverify(int sock, unsigned char* server_cert, long server_cert_size, uns
     // cout<<"\n"
     // BIO_dump_fp (stdout, (unsigned char *)cloud_half_key, Chalfkey_size);
     cout<<"\nSigned buffer"<<endl;
-    BIO_dump_fp (stdout, (unsigned char *)CDH_sgn, CDH_sgn_size);
+    //BIO_dump_fp (stdout, (unsigned char *)CDH_sgn, CDH_sgn_size);
+    BIO_dump_fp (stdout, (char *)CDH_sgn, CDH_sgn_size);
 
    // create the signature context:
     const EVP_MD* md = EVP_sha256();
@@ -503,7 +504,8 @@ int len_user = username.length();
 	}
     cout<<"\n Client Nonce size:"<<client_nonce_size<<endl;
     cout<<"\n Client Nonce is:"<<endl;
-    BIO_dump_fp(stdout, client_nonce, client_nonce_size);
+    //BIO_dump_fp(stdout, client_nonce, client_nonce_size);
+    BIO_dump_fp(stdout, (const char *)client_nonce, client_nonce_size);
     cout<<"\n The Username is:"<<username<<endl;
 
     //Send client nonce with the username
