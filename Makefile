@@ -16,10 +16,10 @@ CLIENT_SOURCES = ./Client/client.cpp \
 all: server client
 
 server: $(SERVER_SOURCES)
-	$(CXX) $(CXXFLAGS) $^ -o $@ -lssl -lcrypto 
+	$(CXX) $(CXXFLAGS) $^ -o $@ -lssl -lcrypto $(LDFLAGS) -Wno-deprecated-declarations
 
 client: $(CLIENT_SOURCES)
-	$(CXX) $(CXXFLAGS) $^ -o $@ -lssl -lcrypto 
+	$(CXX) $(CXXFLAGS) $^ -o $@ -lssl -lcrypto $(LDFLAGS) -Wno-deprecated-declarations
 
 .PHONY: clean run_server run_client
 

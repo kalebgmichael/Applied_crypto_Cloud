@@ -104,8 +104,7 @@ cout<<"\n\n\n\nCloud begining to sign !!!!!!!!!!\n\n\n";
     //client_Nonce3[client_nounce_size] = '\0';
 
     cout<<"\n Client nonce in sign:"<<endl;
-   //BIO_dump_fp (stdout, (unsigned char *)client_Nonce3, client_nounce_size);
-    BIO_dump_fp (stdout, (char *)client_Nonce3, client_nounce_size);
+   BIO_dump_fp (stdout, (unsigned char *)client_Nonce3, client_nounce_size);
 
    // read my private key file from keyboard:
    string prvkey_file_name = "Cprvkey.pem";
@@ -163,8 +162,7 @@ cout<<"\n\n\n\nCloud begining to sign !!!!!!!!!!\n\n\n";
    //delete[] CDHpublic_buffer1;
   //CDHpublic_buffer1 = CDHpublic_buffer;
    cout << "\n Nonce buffer" << endl;
-   //BIO_dump_fp(stdout, (unsigned char *)client_Nonce3, client_nounce_size);
-   BIO_dump_fp(stdout, (char *)client_Nonce3, client_nounce_size);
+   BIO_dump_fp(stdout, (unsigned char *)client_Nonce3, client_nounce_size);
 
    //delete[] client_Nonce3;
   // delete[] client_Nonce1;  // Also, consider why you're deleting this. Was it dynamically allocated outside the function?
@@ -597,7 +595,7 @@ std::string uname1(username);
 cout<<"\n The Username is: "<<uname1<<endl;
 cout<<"\n Nonce size"<<client_nounce_size<<endl;
 cout<<"\n The Client Nonce is: "<<endl;
-BIO_dump_fp(stdout, (const char *)client_Nonce, client_nounce_size);
+BIO_dump_fp(stdout, client_Nonce, client_nounce_size);
 //delete[] client_Nonce;
 //read(new_socket, (long int*)&client_clear_buf_size, sizeof(long int));
  
