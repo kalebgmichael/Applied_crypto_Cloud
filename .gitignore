@@ -46,5 +46,3 @@ Server/publickeys/
 # Compiled binaries
 /server
 /client
-
-Makefile
